@@ -1,0 +1,3 @@
+[submodule "isucon-aws-terraform"]
+	path = isucon-aws-terraform
+	url = git@github.com:momotaro98/isucon-aws-terraform.git
