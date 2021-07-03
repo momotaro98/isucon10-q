@@ -20,6 +20,24 @@
     shell: /bin/bash
     state: present
     system: no
+    generate_ssh_key: yes
+    ssh_key_type: rsa
+    ssh_key_bits: 4096
+    ssh_key_file: .ssh/id_rsa
+    ssh_key_passphrase: ""
+    force: no
+
+- name: Set authorized key of myself to allow other servers to access with same user
+  file:
+    path: /home/isucon/.ssh/authorized_keys
+    state: touch
+    owner: isucon
+    group: isucon
+    mode: 0600
+
+- name: Insert content to the authorized key file
+  shell: |
+    cat /home/isucon/.ssh/id_rsa.pub >> /home/isucon/.ssh/authorized_keys
 
 - name: Add sudoers
   become: yes
