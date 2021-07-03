@@ -13,7 +13,7 @@ echo ''
 for srv in "isu2" "isu3"
 do
   echo 'starting for '${srv}
-  ssh isucon@${srv} git -C ${repo_path} pull origin main
+  ssh isucon@${srv} git -C ${repo_path} pull origin master || ssh isucon@${srv} git clone https://github.com/momotaro98/isucon10-q.git
   ssh isucon@${srv} ${repo_path}/deploy.sh
   echo 'finished for '${srv}
 done

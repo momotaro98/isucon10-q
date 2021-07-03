@@ -7,10 +7,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 echo 'Restarting Go...'
 cd $DIR/webapp/go/
 go build -o isuumo
-sudo systemctl stop isuumo.golang.service
+sudo systemctl stop isuumo.go.service
 cp isuumo /home/isucon/isuumo/webapp/go/
 cd $DIR
-sudo systemctl restart isuumo.golang.service
+sudo systemctl restart isuumo.go.service
 echo 'Restarted!'
 
 sudo cp $DIR/systemd/* /etc/systemd/system/
