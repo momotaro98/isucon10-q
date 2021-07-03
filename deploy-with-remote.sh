@@ -3,7 +3,7 @@
 repo_path=/home/isucon/isucon10-q
 
 echo 'running deploy to this server'
-git -C ${repo_path} pull origin main
+git -C ${repo_path} pull origin master
 ${repo_path}/deploy.sh
 
 echo 'running deploy to other servers, isu2 and isu3'
