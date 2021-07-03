@@ -5,13 +5,14 @@
     - role: common
     - role: langs
     - role: web-bootstrap
+    # momotaro98はGot以外でやらないので他言語はコメントアウト
     - role: web-go
-    - role: web-node
-    - role: web-ruby
-    - role: web-rust
-    - role: web-deno
-    - role: web-php
-    - role: web-perl
-    - role: web-python
+    # - role: web-node
+    # - role: web-ruby
+    # - role: web-rust
+    # - role: web-deno
+    # - role: web-php
+    # - role: web-perl
+    # - role: web-python
     - role: web-prepare
     - role: bench
